@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace webapiwithdb.Controllers
 {
@@ -23,7 +25,10 @@ namespace webapiwithdb.Controllers
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
-            return "value";
+            string val1 = Array.Find(days, element => element.StartsWith("S",StringComparison.Ordinal));
+            string val2 = days.Select()
+            //String val3 = days.Select(x => x.Length >= id && x[id])
+            return string.Concat("Val1"+val1, " Val2"+val2);
         }
 
         // POST: api/Values

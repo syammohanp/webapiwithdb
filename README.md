@@ -13,6 +13,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet aspnet-codegenerator controller -name ValuesController -async -api --readWriteActions -outDir Controllers
 Dotnet:
 dotnet new webapi -n sampleproj
+dotnet new console -o ProjectFolder
 dotnet build
 dotnet run
 dotnet watch run
